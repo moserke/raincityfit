@@ -38,6 +38,7 @@ jobs:
         run: env
   deploy:
     runs-on: ubuntu-latest
+    needs: [build]
     steps:
       - name: dependent
         run: echo Im next
